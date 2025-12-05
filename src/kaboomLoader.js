@@ -1,6 +1,9 @@
 // default kaboom import
 import kaboom from 'kaboom';
 
+// game movement speed
+export const movementSpeed = 200;
+
 // kaboom() is to initialize an new canvas
 export const k = kaboom({
 	// default screen scale
