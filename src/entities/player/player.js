@@ -9,7 +9,10 @@ export function createPlayer() {
         // sprite defines the sprite for this object
         k.sprite(spriteList.player),
         // defines a player area to check collision
-        k.area(),
+        k.area({
+            // shape define a 16x16 hitbox size
+            shape: new Rect(k.vec2(0, 4), 16, 20)
+        }),
         // its a physical body thats responds to gravity
         k.body(),
         // 'player' is a tag to ref a player obj in case of have two of the same
