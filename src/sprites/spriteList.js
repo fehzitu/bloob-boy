@@ -20,7 +20,10 @@ const player = loadSprite('player', 'sprites/player.png', {
             loop: true,
         },
         // this animation only has 1 frame
-        "jump": 8,
+        "jump": {
+            from: 4,
+            to: 7
+        }
     }
 });
 
