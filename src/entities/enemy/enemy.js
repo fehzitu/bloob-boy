@@ -5,8 +5,7 @@ import { spriteList } from '../../sprites/spriteList.js';
 export function createEnemy() {
     return k.add([
         // pos is the position where will create this object, the first is a horizontal position and the second is vertical ((0, 0) is the top left point)
-        k.pos(0, 0),
-        //k.pos(width() - 64, 0),
+        k.pos(width() - 64, 0),
         // sprite defines the sprite for this object
         k.sprite(spriteList.player),
         // defines a enemy area to check collision
@@ -21,10 +20,11 @@ export function createEnemy() {
         health(100),
         // properties can be passed as a object literals
         {
+            dir: 1,
             // dead status to verify
             dead: false,
             // enemy speed status
-            speed: 200
+            speed: 100
         },
         // opacity defines a sprite opacity
         opacity(0.8),

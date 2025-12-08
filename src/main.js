@@ -14,7 +14,7 @@ addPlayerControls(playerInstance);
 // enemy instance object
 const enemyInstance = createEnemy();
 // add ia (auto control) to a enemy instance
-addEnemyIa(enemyInstance, 'simple');
+addEnemyIa(enemyInstance, 'simple', playerInstance);
 
 // floor instance object
 const floorInstance = createFloor();
