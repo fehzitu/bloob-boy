@@ -3,17 +3,25 @@ import { createPlayer } from './entities/player/player.js';
 import { addPlayerControls } from './entities/player/movement.js';
 import { createEnemy } from './entities/enemy/enemy.js';
 import { addEnemyIa } from './entities/enemy/ia.js';
-import { createFloor } from './objects/floor.js';
 
-// player instance object
-const playerInstance = createPlayer();
-// add player movement to player instance
-addPlayerControls(playerInstance);
+// my levels imports
+import { level1 } from './levels/level1.js'
 
-// enemy instance object
-const enemyInstance = createEnemy();
-// add ia (auto control) to a enemy instance
-addEnemyIa(enemyInstance, 'simple');
+// create a scene
+scene('scene1', () => {
+    // player instance object
+    const playerInstance = createPlayer();
+    // add player movement to player instance
+    addPlayerControls(playerInstance);
 
-// floor instance object
-const floorInstance = createFloor();
+    // enemy instance object
+    const enemyInstance = createEnemy();
+    // add ia (auto control) to a enemy instance
+    addEnemyIa(enemyInstance);
+
+    // add the first level to the game
+    level1();
+});
+
+// enter the scenel
+go('scene1');
